@@ -1,0 +1,39 @@
+# --- Required ---
+samples:
+  - sample1
+  - sample2
+  # add more samples here
+
+reference: "/path/to/reference.fasta"
+fastq_dir: "/path/to/fastq_dir"
+out_dir: "/path/to/output_dir"
+
+# --- Mapping ---
+minimap2_preset: "map-hifi"   # map-hifi for PacBio HiFi, map-ont for Nanopore
+threads: 10
+
+# --- CuteSV ---
+cutesv_max_cluster_bias_ins: 1000
+cutesv_diff_ratio_ins: 0.9
+cutesv_max_cluster_bias_del: 1000
+cutesv_diff_ratio_del: 0.5
+cutesv_min_qual: 20
+
+# --- SVIM ---
+svim_min_sv_size: 30
+svim_max_sv_size: 1000000
+svim_min_depth: 2
+svim_min_qual: 15
+
+# --- Size filter ---
+min_svlen: 50
+max_svlen: 1000000
+
+# --- SURVIVOR ---
+survivor_bin: "SURVIVOR"      # path to SURVIVOR binary if not on PATH
+survivor_max_distance: 250
+survivor_min_callers: 2
+survivor_same_type: 1
+survivor_same_strand: 1
+survivor_estimate_distance: 0
+survivor_min_size: 50
