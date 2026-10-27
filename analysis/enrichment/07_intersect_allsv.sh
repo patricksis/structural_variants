@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # Intersect all SVs with repeats, genes, and exons.
-# Usage: bash 07_intserect_allsv.sh
+# Usage: bash 07_intersect_allsv.sh
 
 # --- Configuration ---
 ALL_SVS_BED="allSVs.bed"
