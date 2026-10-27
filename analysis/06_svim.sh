@@ -34,7 +34,8 @@ for bam in "${BAM_DIR}"/*.sorted.bam; do
         "${OUT_DIR}/${sample}_svim" \
         "$bam" \
         "$REF"
-done
 
-# Copy SVIM output to a per-sample file name for downstream filtering
-cp "${OUT_DIR}/${sample}_svim/variants.vcf" "${OUT_DIR}/${sample}_svim.vcf"
+    # Copy SVIM output to a per-sample file name for downstream filtering
+    cp "${OUT_DIR}/${sample}_svim/variants.vcf" "${OUT_DIR}/${sample}_svim.vcf"
+    
+done
