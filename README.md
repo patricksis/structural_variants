@@ -10,7 +10,7 @@ Reads are quality-checked, mapped to a reference genome, and processed through t
 
 - [minimap2](https://github.com/lh3/minimap2)
 - [samtools](http://www.htslib.org/)
-- [LongQC](https://github.com/rlorigro/LongQC) (via Singularity)
+- [LongQC](https://github.com/yfukasawa/LongQC) (via Singularity)
 - [Sniffles2](https://github.com/fritzsedlazeck/Sniffles)
 - [CuteSV](https://github.com/tjiangHIT/cuteSV)
 - [SVIM](https://github.com/eldariont/svim)
