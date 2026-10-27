@@ -75,7 +75,23 @@ bash analysis/09_merge_survivor.sh
 ```
 Merges per-caller VCFs per sample using SURVIVOR. Requires a `survivor_list/` directory with one `<sample>_list.txt` per sample listing the VCF paths to merge.
 
-### 9. Enrichment Analysis
+### 9. Convert SVs to BED
+Split the merged VCF by SV type, then convert each to BED. Deletions, duplications, and inversions use SVLEN to set the end coordinate. Insertions are written as 1 bp intervals since they don't span reference sequence.
+```bash
+python3 analysis/enrichment/extract_svtype.py merged.vcf DEL deletions.txt
+python3 analysis/enrichment/extract_chr_start_end.py deletions.txt deletions.bed
+
+python3 analysis/enrichment/extract_svtype.py merged.vcf DUP duplications.txt
+python3 analysis/enrichment/extract_chr_start_end.py duplications.txt duplications.bed
+
+python3 analysis/enrichment/extract_svtype.py merged.vcf INV inversions.txt
+python3 analysis/enrichment/extract_chr_start_end.py inversions.txt inversions.bed
+
+python3 analysis/enrichment/extract_svtype.py merged.vcf INS insertions.txt
+python3 analysis/enrichment/extract_chr_start_end_INS.py insertions.txt insertions.bed
+```
+
+### 10. Enrichment Analysis
 Convert VCFs to BED, then run intersections and permutation tests:
 ```bash
 # Prepare feature BEDs
