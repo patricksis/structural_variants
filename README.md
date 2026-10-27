@@ -107,7 +107,7 @@ bash analysis/enrichment/concat_allSVs.sh
 bash analysis/enrichment/02_gene_overlap.sh
 bash analysis/enrichment/04_exon_overlap.sh
 bash analysis/enrichment/06_repeat_overlap.sh
-bash analysis/enrichment/07_intserect_allsv.sh
+bash analysis/enrichment/07_intersect_allsv.sh
 bash analysis/enrichment/09_intersect_5kb_up_down.sh
 
 # Permutation enrichment test
