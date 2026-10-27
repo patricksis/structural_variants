@@ -92,7 +92,7 @@ python3 analysis/enrichment/extract_chr_start_end_INS.py insertions.txt insertio
 ```
 
 ### 10. Enrichment Analysis
-Convert VCFs to BED, then run intersections and permutation tests:
+Prepare feature BEDs, intersect them with the SV BEDs, and run permutation tests:
 ```bash
 # Prepare feature BEDs
 bash analysis/enrichment/01_gene_bed.sh
